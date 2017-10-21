@@ -1,0 +1,106 @@
+<head>
+  <title>CLWdisplay</title>
+</head>
+
+<body>
+<div id="CLWheading" style="display: none">
+  <h1>CLWdisplay</h1>
+
+  {{> hello}}
+
+
+</div>
+  {{> ITU}}
+</body>
+
+<template name="hello">
+  <button id="connect">Login to CLWrota</button>
+  <button id="getICU">Get ICU staff</button>
+  <button id="test">Test...</button>
+  <p>{{status}}</p>
+  <p>{{token}}</p>
+  <p>{{ICU}}</p>
+</template>
+
+<template name="ITU">
+  
+  <!--     ITU Segment -->
+      <div id="itu">
+  <!--       Titles div start -->
+        <div class="ui two column grid">
+        <div class="column">
+          <div class="ui basic segment padded">
+            <h1 class="ui header">Welcome to <span id="department">the Intensive Care Unit</span></h1>
+            <h4 id="date" class="ui header">Saturday, 21st Oct 2017</h4>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui basic segment right aligned">
+            <div class="image ui medium" id="hmni">
+              <img src="https://hellomynameis.org.uk/files/hello-my-name-is-logo-web.png">
+            </div>
+          </div>
+            
+        </div>
+      </div>
+  <!-- Titles div end -->
+        
+        <main class="ui grid">
+          <div class="row">
+              <div class="center aligned starter column">
+                <h1 class="ui header">Your <span id="team_name">ICU</span> team today is...</h1>
+              </div>
+          </div>
+      </main>
+
+        
+  <!--       Staff grid start -->
+        <div class="ui two column centered grid">
+          <div class="column centered">
+            <div class="ui basic segment">
+            <div id="consultant" class="ui centered card">
+              <div class="image">
+                <img id="consultant_image" src="https://semantic-ui.com/images/avatar2/large/matthew.png">
+              </div>
+              <div class="content">
+                <h2 id="consultant_name" class="header">{{consultant}}</h2>
+                <h2 id="consultant_grade" class="header">ICU Consultant</h2>
+                     <!--  <div class="ui divider"></div>
+              <div class="description">
+                      <p id="consultant_description">The ICU Consultant is responsible for overall care of every patient on the ICU.</p>
+                    </div> -->
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui basic segment">
+            <div id="tier_2" class="ui card">
+              <div class="image">
+                <img id="tier_2_image" src="https://semantic-ui.com/images/avatar2/large/kristy.png">
+              </div>
+              <div class="content">
+                <h2 id="tier_2_name" class="header">{{registrar}}</h2>
+                <h2 id="tier_2_grade" class="header">Registrar</h2>
+       <!--                <div class="ui divider"></div>
+              <div class="description">
+                      <p id="tier_2_description">The ICU registrar is....</p>
+                    </div> -->
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+  <!--       Staff grid end -->
+        
+        <!-- <div class="ui divider"></div> -->
+      </div>
+
+      
+  <!--   End ITU Segent -->
+
+      
+    
+    
+
+</template>
